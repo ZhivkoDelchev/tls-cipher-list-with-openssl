@@ -9,3 +9,14 @@ This is a simple script for scanning supported cipher suites and tls version usi
 ```bash
 ./tls-n-ciphers.sh <host:port>
 ```
+
+
+## Docker build & run
+Build docker image: 
+```bash
+docker build -t tls-check .
+```
+Run: 
+```bash
+docker run -it -e "destination=google.com:443" tls-check | grep YES
+```
