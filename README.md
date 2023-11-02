@@ -5,6 +5,9 @@ This is a simple script for scanning supported cipher suites and tls version usi
 * bash
 * openssl
 
+Alternative
+* Docker
+
 ## Usage
 ```bash
 ./tls-n-ciphers.sh <host:port>
