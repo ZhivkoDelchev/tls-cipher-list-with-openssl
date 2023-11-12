@@ -1,12 +1,12 @@
-FROM alpine:3.18.4
+FROM amazonlinux:2023
 
 ENV destination foo
 
 WORKDIR /opt/
 
-RUN apk upgrade --update-cache --available && \
-    apk add openssl && \
-    rm -rf /var/cache/apk/*
+RUN yum -y update && yum upgrade && \
+    yum install -y openssl && \
+    yum clean all && rm -rf /var/cache/yum
 
 COPY tls-n-ciphers.sh .
 
