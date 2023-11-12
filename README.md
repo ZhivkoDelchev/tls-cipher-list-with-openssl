@@ -23,3 +23,8 @@ Run:
 ```bash
 docker run -it -e "destination=google.com:443" tls-check | grep YES
 ```
+
+## Running with published docker image
+```bash
+docker run -it -e "destination=google.com:443" jako8809 tls-cipher-list-with-openssl | grep YES
+```
